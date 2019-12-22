@@ -19,9 +19,9 @@ namespace EmailAgnostic.Controllers
             Guid g = Guid.NewGuid();
             TempData["UserDetails"] = signup;
             TempData["code"] = null; 
-            MailAddress fromAddress = new MailAddress("sxxxxxx@hotmail.com", "Sumit");
+            MailAddress fromAddress = new MailAddress("xxxxxxx@hotmail.com", "Sumit");
             MailAddress toAddress = new MailAddress(signup.Email, signup.Name);
-            const string fromPassword = "xxxxx";
+            const string fromPassword = "xxxxxxx";
             string body = System.IO.File.ReadAllText(@"C:\Users\SayAk\Desktop\EmailAgnostic-master\EmailAgnostic\Template\emailTemplate.html");
             //string format
             //body = body.Replace("&Customer", signup.Name).Replace("&sample@email.com", signup.Email).Replace("&samplecode",g.ToString());
